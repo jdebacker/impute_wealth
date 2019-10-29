@@ -13,7 +13,13 @@ nipa_var_dict = {
     'CON5201A027NBEA': 'Contributions for government social insurance: Employee and self-employed contributions: Federal social insurance funds: Old-age, survivors, disability, and hospital insurance: Self-employed',
     'PCE': 'Personal Consumption Expenditures',
     'G170091A027NBEA': 'Government consumption expenditures: Education',
-    'PCEPI': 'Personal Consumption Expenditures: Chain-type Price Index'
+    'PCEPI': 'Personal Consumption Expenditures: Chain-type Price Index',
+    'B703RC1Q027SBEA': 'Personal income receipts on assets: Personal dividend income',
+    'PII': 'Personal Income Receipts on Assets: Personal Interest Income',
+    'B703RC1Q027SBEA': 'Personal income receipts on assets: Personal dividend income',
+    'A063RC1Q027SBEA': 'Personal current transfer receipts: Government social benefits to persons',
+    'A033RC1A027NBEA': 'National income: Compensation of employees',
+    'A4102C1A027NBEA': 'Gross domestic income: Compensation of employees, paid: Wages and salaries'
 }
 nipa_var_list = list(nipa_var_dict.keys())
 nipa_data = web.DataReader(nipa_var_list, "fred", start, end)
