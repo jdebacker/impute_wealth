@@ -27,3 +27,12 @@ fa_data.rename(columns=fa_mapper, inplace=True)
 # resample data so annual
 fa_data = fa_data.resample('A').mean()
 print(fa_data.head(n=10))
+
+# create dataframe with capitalization factors
+print('NIPA type = ', nipa_data.index.dtype)
+print('FA type = ', fa_data.index.dtype)
+cap_data = nipa_data.merge(fa_data, how='outer', on='DATE')
+cap_data['r_div'] = cap_data['dividend_income'] / cap_data['corp_equity']
+cap_data['r_int'] = cap_data['interest_income'] / cap_data['debt']
+cap_data['r_rent'] = cap_data['rent'] / cap_data['total_nonfin_assets']
+print(cap_data[['r_div', 'r_int', 'r_rent']].head(n=50))
