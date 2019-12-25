@@ -104,7 +104,8 @@ FA_VARS = {
     'BOGZ1LM153064475Q': (
         'Households and nonprofit organizations; directly and ' +
         'indirectly held corporate equities; asset, Market value ' +
-        'levels, Quarterly, Not Seasonally Adjusted', 'corp_equity'),
+        'levels, Quarterly, Not Seasonally Adjusted',
+        'corp_equity_dir_and_indirect'),
     'BOGZ1LM223064213Q': (
         'State and local government employee retirement funds; ' +
         'corporate equities held indirectly through mutual funds; ' +
